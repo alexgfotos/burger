@@ -3,6 +3,10 @@ button {
   text-align: center; 
 }
 
+body {
+  background-image: linear-gradient(white, aqua);
+}
+
 .centered {
   display: flex;
   align-items: center;
