@@ -1,6 +1,6 @@
 # Borger Hut!
     
-This project use npm express, mysql, and handlebars to deliver a full stack app.  When a user visits the site, they can see a list of created burgers and eaten burgers.  They can also add new burgers, eat burgers, and delete burgers.
+This project use npm express, mysql, ORM, and handlebars to deliver a full stack app.  When a user visits the site, they can see a list of created burgers and eaten burgers.  They can also add new burgers, eat burgers, and delete burgers.
     
   
 # Table of Contents
