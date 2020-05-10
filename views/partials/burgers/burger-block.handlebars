@@ -1,4 +1,9 @@
-<li>
-	{{burger_name}}
-	<button {{#if devoured}}class="digest"{{else}}class="change-devoured"{{/if}} data-id="{{this.id}}">{{#if devoured}}DIGEST!{{else}}DEVOUR!{{/if}}</button>
-</li>
+<tr>
+	<th>
+		{{burger_name}}
+	</th>
+	<th>
+		<button {{#if devoured}}class="digest button" {{else}}class="change-devoured button level-right" {{/if}}
+			data-id="{{this.id}}">{{#if devoured}}DIGEST!{{else}}DEVOUR!{{/if}}</button>
+	</th>
+</tr>

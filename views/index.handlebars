@@ -1,50 +1,62 @@
+<div class="tile is-ancestor">
+  <img width="300px" src="/assets/images/borger_logo.png" />
+  <div class="tile is-vertical">
 
 
-<article class="panel is-primary">
-  <p class="panel-heading">
-    Add a Burger
-  </p>
-  <div class="panel-block">
-    <form class="create-form">
 
-  <div class="form-group">
-    <label for="burger">Burger Name:</label>
-    <input type="text" id="burger" name="burger_name">
+    <div class="tile level">
+      <article class="column panel is-success">
+        <p class="panel-heading">
+          Add a Borger
+        </p>
+        <div class="panel-block">
+          <form class="create-form">
+
+            <div class="form-group">
+              <input class="input" type="text" id="burger" name="burger_name">
+              <button class="button is-grey-dark" type="submit">Add Borger!</button>
+            </div>
+        </div>
+        </form>
+      </article>
+    </div>
+
+    <div class="tile level">
+      <article class="column panel is-danger">
+        <p class="panel-heading">
+          Borgers Available for Devouration
+        </p>
+        <div class="panel-block">
+          <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+
+            {{#each burger}}
+            {{#unless devoured}}
+            {{> burgers/burger-block}}
+            {{/unless}}
+            {{/each}}
+
+
+          </table>
+      </article>
+    </div>
+
+    <div class="tile level">
+      <article class="column panel is-warning">
+        <p class="panel-heading">
+          Devoured Borgers
+        </p>
+        <div class="panel-block">
+          <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+
+            {{#each burger}}
+            {{#if devoured}}
+            {{> burgers/burger-block}}
+            {{/if}}
+            {{/each}}
+
+          </table>
+        </div>
+      </article>
+    </div>
+
   </div>
-
-  <button class="button is-danger" type="submit">Add Burger!</button>
-</form>
-  </div>
-</article>
-
-
-<article class="panel is-primary">
-  <p class="panel-heading">
-    Burgers Available for Devouration
-  </p>
-  <div class="panel-block">
-    <ul>
-      {{#each burger}}
-      {{#unless devoured}}
-      {{> burgers/burger-block}}
-      {{/unless}}
-      {{/each}}
-
-    </ul>
-  </div>
-</article>
-
-<article class="panel is-danger">
-  <p class="panel-heading">
-    Devoured Burgers
-  </p>
-  <div class="panel-block">
-    <ul>
-      {{#each burger}}
-      {{#if devoured}}
-      {{> burgers/burger-block}}
-      {{/if}}
-      {{/each}}
-    </ul>
-  </div>
-</article>
